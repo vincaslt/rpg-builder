@@ -39,10 +39,7 @@ eventSystem.registerEvent('system:create', (payload: any) => {
 });
 
 eventSystem.registerEvent('user:custom', (payload: any) => {
-  console.log(
-    'Custom event triggered from Lua, with payload:',
-    payload.get('payload')
-  );
+  console.log('Custom event triggered from Lua, with payload:', payload);
 });
 
 async function run() {

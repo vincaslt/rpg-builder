@@ -1,8 +1,7 @@
 local function create(payload)
-  print('Create called from inside lua, with payload:', payload)
-  return payload
+  print('Create called from inside lua, with payload:', payload['payload'])
 end
 
 registerEvent('system:create', create)
 
-triggerEvent('user:custom', { payload = 123 })
+triggerEvent('user:custom', 123)
